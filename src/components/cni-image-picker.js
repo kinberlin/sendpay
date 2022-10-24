@@ -10,7 +10,7 @@ import {
 
 import { images } from '../assets';
 
-export function ImagePickerAvatar({ uri, onPress }) {
+export function CniPicker({ uri, onPress }) {
   return (
     <ImageBackground
       style={styles.imageBackground}
@@ -35,15 +35,14 @@ const styles = StyleSheet.create({
   },
   avatar: {
     alignItems: 'center',
-    marginTop: '10%',
   },
   avatarImage: {
-    height: 210,
-    width: 210,
+    height: 190,
+    width: 300,
     overflow: 'hidden',
-    borderColor: '#ffffff',
+    borderColor: 'blue',
     borderWidth: 4,
-    borderRadius: 260 / 2,
+    borderRadius: 2,
   },
   addButton: {
     height: 44,
@@ -51,7 +50,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f2f2fC',
     borderRadius: 50,
     position: 'absolute',
-    right: 104,
+    left: 30,
     bottom: 40,
   },
   addButtonIcon: {
