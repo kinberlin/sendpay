@@ -135,7 +135,10 @@ const openCameraR = async () => {
 }
 
   const onSignUpPressed = () => {
-    navigation.navigate('RegisterScreen')
+    navigation.reset({
+      index: 0,
+      routes: [{ name: 'Dashboard' }],
+    })
   }
 
   return (
