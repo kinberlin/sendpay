@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, StyleSheet, TouchableOpacity,ImageBackground } from 'react-native'
 import { Text } from 'react-native-paper'
 import Background from '../components/Background'
 import Logo from '../components/Logo'
@@ -43,12 +43,12 @@ export default function RegisterScreen({ navigation }) {
     );
 
     // Explore the result
-    console.log(result);
+    console.log(result.assets[0]);
 
-    if (!result.cancelled) {
-      setImage(result.uri);
-      console.log(result.uri);
-    }
+    /*if (!result.canceled) {
+      setImage(result.assets[0].uri);
+      console.log(result.assets[0].uri);
+    }*/
   }
 
   const openCamera = async () => {
@@ -70,12 +70,12 @@ export default function RegisterScreen({ navigation }) {
     );
 
     // Explore the result
-    console.log(result);
+    console.log(result.assets[0]);
 
-    if (!result.cancelled) {
-      setImage(result.uri);
-      console.log(result.uri);
-    }
+   /* if (!result.cancelled) {
+      setImage(result.assets[0].uri);
+      console.log(result.assets[0].uri);
+    }*/
 }
 
   const onSignUpPressed = () => {
@@ -97,12 +97,11 @@ export default function RegisterScreen({ navigation }) {
 
   return (
     <Background>
+
       <BackButton goBack={navigation.goBack} />
-      <Header>Créer un Compte</Header>
-      <View style={[{height:200, marginBottom : 10}]}>
+      <View style={[{height:200, marginBottom : 20, }]}>
       <ImagePickerAvatar uri={image} onPress={() => setVisible(true)} />
       </View>
-
       <TextInput
         label="Nom"
         returnKeyType="next"
@@ -165,4 +164,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: theme.colors.primary,
   },
+  
 })

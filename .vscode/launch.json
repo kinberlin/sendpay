@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "node-terminal",
+            "name": "Run Script: android",
+            "request": "launch",
+            "command": "yarn run android",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
